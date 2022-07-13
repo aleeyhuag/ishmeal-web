@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.section-p1{
+    padding: 40px 80px;
+}
+
+.section-m1{
+    margin: 40px 0;
+}
+
+button.normal{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+button.white{
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 18px;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid #fff;
+    outline: none;
+    transition: 0.2s;
+}
+
+body{
+    width: 100%;
+}
+
+/* hero section */
+
+#hero{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+#hero .slider{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.bg-img{
+    background-image: url(/public/img/hero/1.jpg);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    z-index: -9;
+    background-position: top 20% right 0;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+
+.bg-img.sec{
+    background-image: url(/public/img/hero/2.jpg);
+    background-position: top 45% right 0%;
+}
+
+.slider .content{
+    padding: 0 80px;
+}
+
+#hero .slider:nth-child(2){
+    align-items: flex-end;
+}
+
+#hero h1{
+    width: 60%;
+    line-height: 80px;
+    letter-spacing: 0px;
+    font-weight: 700;
+    font-size: 50px;
+    transform-origin: 50% 50%;
+    opacity: 1;
+    transform: translate(0px, 0px);
+    visibility: visible;
+    color: rgb(237 240 249);
+}
+
+#hero p{
+    color: #fff;
+    font-style: oblique;
+}
+
+#hero .slider:nth-child(2) h1{
+    color: #ee69a7;
+    align-self: flex-end;
+}
+
+#hero .slider:nth-child(2)  p{
+    color: #fff;
+}
+
+/* service section */
+
+.services{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 100px;
+}
+
+.service-header{
+    text-align: center;
+    justify-content: center;
+    color: #06163a;
+    font-size: 28px;
+    padding: 0 10vw 10vh;
+}
+
+.service-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-item{
+    background: #f8f8f8;
+    font-size: 20px;
+    color: #000;
+    height: 300px;
+    width: 350px;
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 41% 59% 45% 55% / 64% 22% 78% 36% ;
+}
+
+.service-item img{
+    width: 60px;
+    height: 60px;
+}
+
+.service-item h2{
+    font-size: 28px;
+    font-weight: 400;
+}
+.service-item p{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* call back section */
+.call-back{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 100px;
+    background: #f8f8f8;
+    width: 100%;
+}
+
+.call-back-heading{
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px; 
+}
+
+.call-back-heading h2{
+    font-size: 44px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.call-back-heading p{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.call-back-container{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 50px;
+    padding: 20px 0;
+}
+
+.call-back-icon{
+    width: 100%;
+}
+
+.call-back-icon img{
+    width: 100%;
+}
+
+.call-back-container form{
+    width: 100%;
+    padding: 20px;
+}
+
+.call-back-container form input,
+.call-back-container form select{
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #fff;
+    color: #383838;
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.call-back-container form button{
+    background: #b70000;
+    color: #fff;
+    line-height: 25px;
+}
+
+/* Banner */
+
+.banner{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 80px;
+    background: #b70000;  
+}
+
+.banner-container{
+    width: 350px;
+    height: 300px;
+    padding: 0 20px;
+}
+
+.banner-bg{
+    width: 100%;
+    height: 100%;
+
+}
