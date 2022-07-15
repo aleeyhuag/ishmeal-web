@@ -96,3 +96,17 @@
     background: #b70000;
     transform: translate(-50%, -50%);
 }
+
+.quick-media{
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    font-size: 60px;
+    color: green;
+    opacity: .6;
+}
+
+.quick-media:hover,
+.quick-media:focus{
+    opacity: 1;
+}
