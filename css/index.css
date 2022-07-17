@@ -576,3 +576,111 @@ body{
 .about-note-item a:hover{
     opacity: 1;
 }
+
+/* contact page */
+
+.contact-header{
+    background-image: url(../img/hero/1.jpg);
+    background-size: cover;
+    background-position: top 50% left 50%;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 100px 80px;
+}
+
+.contact-header h1{
+    font-size: 70px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.contact-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 80px;
+}
+
+.contact-container p{
+    font-size: 22px;
+    padding: 10px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.contact-body{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-body form{
+    padding: 40px 10px;
+}
+
+.contact-body form .name-mail{
+    width: 100%;
+    display: flex;
+}
+
+.contact-body form .name-mail input:not(.name){
+    margin-left: 10px;
+}
+
+.contact-body form textarea{
+    resize: none;
+    height: 150px;
+}
+
+.contact-body form button{
+    border: 1px solid #b70000;
+    opacity: .7;
+}
+
+.contact-body .contact-item{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 50px;
+}
+
+.contact-body .contact-item .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.contact-body .contact-item .icon img{
+    height: 170px;
+}
+
+.contact-body .contact-item .address{
+    text-align: center;
+    border-top: 1px solid #383838;
+    padding-top: 20px;
+}
+
+.contact-body .contact-item .address p{
+    font-size: 17px;
+    line-height: 20px;
+}
+
+.contact-body .contact-item .address a{
+    font-weight: 700;
+}
+
+.map-frame{
+    height: 450px;
+    width: 100%;
+    display: flex;
+}
+
+.map-frame iframe{
+    width: 100%;
+    height: 100%;
+}
