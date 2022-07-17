@@ -1,3 +1,14 @@
+//toggle button
+const toggleBtn = document.querySelector('.toggle-btn');
+const linkContainer = document.querySelector('.links-container');
+
+toggleBtn.addEventListener('click', () => {
+    toggleBtn.classList.toggle('active');
+    linkContainer.classList.toggle('show');
+})
+
+// slider
+
 const slideshowImages = document.querySelectorAll("#hero .slider");
 
 const nextImageDelay = 5000;
