@@ -675,7 +675,7 @@ body{
 
 /* About us page */
 
-.service-header{
+.services-header{
     background-image: url(../img/hero/3.jpg);
     background-size: cover;
     background-position: top 50% left 50%;
@@ -687,19 +687,19 @@ body{
     padding: 100px 80px;
 }
 
-.service-header h1{
+.services-header h1{
     font-size: 70px;
     color: #fff;
     margin-bottom: 30px;
 }
 
-.service-header p{
+.services-header p{
     font-size: 18px;
     color: #f8f8f8;
     position: relative;
 }
 
-.service-header p::before{
+.services-header p::before{
     content: '';
     position: absolute;
     width: 20%;
