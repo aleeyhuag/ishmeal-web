@@ -793,6 +793,45 @@ body{
     line-height: 20px;
 }
 
+/* idea and insight */
+
+.idin-header{
+    background-image: url(../img/hero/2.jpg);
+    background-size: cover;
+    background-position: top 50% left 50%;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 100px 80px;
+}
+
+.idin-header h1{
+    font-size: 70px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.idin-header p{
+    font-size: 18px;
+    color: #f8f8f8;
+    position: relative;
+}
+
+.idin-header p::before{
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 2px;
+    left: 50%;
+    margin: auto;
+    border-radius: 1px;
+    top: -10px;
+    background: #ffffff;
+    transform: translate(-50%, -50%);
+}
+
 
 @media (max-width: 996px){
     /* hero */
