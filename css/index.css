@@ -14,6 +14,14 @@
     margin: 40px 0;
 }
 
+.blue{
+    background: #06163a !important;
+}
+
+.red{
+    background: #b70000 !important;
+}
+
 button.normal{
     font-size: 14px;
     font-weight: 600;
@@ -60,6 +68,7 @@ select{
 }
 body{
     width: 100%;
+    position: relative;
 }
 
 /* hero section */
@@ -240,8 +249,88 @@ body{
     line-height: 25px;
 }
 
-/* Banner */
+/* insight section */
+.insight{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px;
+}
 
+.insight h2{
+    font-size: 44px;
+    margin-bottom: 10px;
+}
+
+.insight > p{
+    font-size: 15px;
+    padding: 15px;
+}
+
+.insight-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    overflow:hidden;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+.insight-container .insight-item{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+
+.insight-item img{
+    width: 100%;
+    height: 300px;
+}
+
+.insight-item img:hover{
+    transform: scale(0.9);
+    transition: transform 2s;
+}
+
+.insight-item h4{
+    font-size: 18px;
+    padding: 10px 10px 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    opacity: .8;
+}
+
+.insight-item h3{
+    font-size: 22px;
+    padding: 0 10px 15px;
+}
+
+.insight-item .date{
+    font-size: 11px;
+    opacity: .7;
+    padding: 0 10px 15px;
+}
+
+.insight-item p{
+    font-size: 15px;
+    padding: 0 10px 15px;
+    line-height: 20px;
+}
+
+.insight-item .tag{
+    font-size: 11px;
+    padding: 0 10px 10px;
+}
+
+.insight a{
+    font-weight: 600;
+    color: #383838;
+    padding: 0 10px 5px;
+}
+
+/* Banner */
 .banner{
     width: 100%;
     display: flex;
@@ -468,6 +557,119 @@ body{
     z-index: -9;
 }
 
+.board{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.board .leadership{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 50px 80px 20px;
+}
+
+.leadership h2{
+    font-size: 33px;
+    padding: 0 40px 20px;
+}
+
+.leadership .note{
+    width: 100%;
+}
+
+.leadership .note p{
+    font-size: 18px;
+    width: 100%;
+    padding: 0 40px 20px;
+}
+
+.leadership .leaders{
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.leaders .item{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.leaders .item img{
+    width: 50%;
+    height: 300px;
+    border-radius: 40px 40px 0 0;
+}
+
+.leaders .item .details{
+    padding: 0 20px;
+}
+
+.item .details h4{
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.item .details h5{
+    font-size: 16px;
+    opacity: .6;
+    margin-bottom: 8px;
+}
+
+.item .details p{
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.board .directors{
+    width: 100%;
+    background: #e0e0e0;
+    padding: 80px;
+}
+
+.board .directors h3{
+    font-size: 26px;
+    padding-bottom: 15px;
+}
+
+.director-container{
+    margin-top: 30px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    grid-gap: 20px;
+}
+
+.director-container .dir-item {
+    width: 280px;
+}
+
+.dir-item:hover{
+    transform: scale(.9);
+    transition: transform 2s;
+    cursor: pointer;
+}
+
+.dir-item img{
+    width: 100%;
+    height: 300px;
+    border-radius: 40px 40px 0 0;
+}
+
+.dir-item h4{
+    font-size: 20px;
+    padding: 10px 0;
+    letter-spacing: 2px;
+}
+
+.dir-item p{
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
 .call-back .textarea{
     resize: none;
     height: 150px;
@@ -673,7 +875,7 @@ body{
     height: 100%;
 }
 
-/* About us page */
+/* service page */
 
 .services-header{
     background-image: url(../img/hero/3.jpg);
@@ -712,36 +914,6 @@ body{
     transform: translate(-50%, -50%);
 }
 
-.call-back.ser{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 80px;
-}
-
-.call-serv{
-    line-height: 50px;
-}
-
-.call-back.ser .call-serv h1{
-    font-size: 44px;
-}
-
-.call-back.ser .call-serv p{
-    font-size: 20px;
-}
-
-.call-back.ser a{
-    background: #fff;
-    color: #06163a;
-    font-weight: 600;
-    padding: 20px;
-    border-radius: 7px;
-    text-decoration: none;
-}
-
 .services-container{
     display: flex;
     width: 100%;
@@ -750,13 +922,60 @@ body{
     flex-wrap: wrap;
 }
 
-.services-container h4{
+/* programs page */
+
+.programs-header{
+    background-image: url(../img/hero/3.jpg);
+    background-size: cover;
+    background-position: top 50% left 50%;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 100px 80px;
+}
+
+.programs-header h1{
+    font-size: 70px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.programs-header p{
+    font-size: 18px;
+    color: #f8f8f8;
+    position: relative;
+}
+
+.programs-header p::before{
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 2px;
+    left: 50%;
+    margin: auto;
+    border-radius: 1px;
+    top: -10px;
+    background: #ffffff;
+    transform: translate(-50%, -50%);
+}
+
+.programs-container{
+    display: flex;
+    width: 100%;
+    padding: 60px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.programs-container h4{
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 20px;
 }
 
-.services-container .core-item-container{
+.programs-container .core-item-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -791,6 +1010,36 @@ body{
     padding-bottom: 15px;
     margin: 0 1.5em 0.5em;
     line-height: 20px;
+}
+
+.call-back.ser{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 80px;
+}
+
+.call-serv{
+    line-height: 50px;
+}
+
+.call-back.ser .call-serv h1{
+    font-size: 44px;
+}
+
+.call-back.ser .call-serv p{
+    font-size: 20px;
+}
+
+.call-back.ser a{
+    background: #fff;
+    color: #06163a;
+    font-weight: 600;
+    padding: 20px;
+    border-radius: 7px;
+    text-decoration: none;
 }
 
 /* idea and insight */
@@ -891,6 +1140,25 @@ body{
         width: 100%;
     }
 
+    .leadership .leaders {
+        flex-direction: column;
+    }
+
+    .leaders .item {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .board .directors {
+        padding: 80px 10px;
+    }
+
+    .director-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     /* contact page */
 
     .contact-body {
@@ -905,6 +1173,11 @@ body{
     }
     .call-back.ser {
         padding: 20px;
+    }
+
+    /* insight */
+    .insight{
+        padding: 0;
     }
 }
 
@@ -953,6 +1226,22 @@ body{
         margin-bottom: 20px !important;
     }
 
+    .services .service-header {
+        text-align: center;
+        justify-content: center;
+        color: #06163a;
+        font-size: 28px;
+        padding: 10vw 10vh;
+    }
+
+    .service-item.blue{
+        display: none;
+    }
+
+    .service-item.red{
+        display: none;
+    }
+
     /* about page */
     .main-about{
         padding: 10px;
@@ -985,6 +1274,26 @@ body{
         padding: 30px;
     }
 
+    .board .leadership {
+        padding: 30px;
+    }
+
+    .leadership .note p {
+        font-size: 15px;
+    }
+
+    .leaders .item {
+        flex-direction: column;
+    }
+
+    .leaders .item img {
+        width: 100%;
+    }
+
+    .leaders .item .details {
+        padding: 20px;
+    }
+
     /* contact page */
 
     
@@ -1008,8 +1317,7 @@ body{
         height: 130px;
     }
 
-    /* services page  */
-
+    /* programs page  */
     .call-back.ser .call-serv h1 {
         font-size: 30px;
     }
@@ -1021,5 +1329,20 @@ body{
     .call-back.ser a {
         text-align: center;
         padding: 15px;
+    }
+
+    /* insight */
+
+    .insight h2 {
+        margin: 20px 0;
+    }
+
+    .insight-container {
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .insight-container .insight-item {
+        width: 100%;
     }
 }
