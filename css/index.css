@@ -1349,6 +1349,10 @@ body{
         width: 100%;
     }
 
+    .ser-img.sec::after{
+        left: 0;
+    }
+
     .call-serv{
         line-height: normal;
     }
@@ -1564,11 +1568,20 @@ body{
     /* service page */
 
     .ser-img::after {
-        top: 100px;
+        top: 0px;
+        width: 100%;
+    }
+
+    .services-content .ser-bg img {
+        height: 80%;
     }
 
     .services-item {
-        padding: 100px 0 10px 0;
+        padding: 0;
+    }
+
+    .ser-img.sec::after {
+        left: 0;
     }
 }
 
