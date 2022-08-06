@@ -11,7 +11,7 @@ toggleBtn.addEventListener('click', () => {
 
 const slideshowImages = document.querySelectorAll("#hero .slider");
 
-const nextImageDelay = 5000;
+const nextImageDelay = 10000;
 let currentImageCounter = 0;
 
 slideshowImages[currentImageCounter].style.opacity = 1;

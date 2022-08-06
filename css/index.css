@@ -131,6 +131,32 @@ body{
     font-style: oblique;
 }
 
+.reveal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 80px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .reveal h5{
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-style: oblique;
+  }
+  .reveal h1{
+    font-size: 44px;
+    margin-bottom: 30px;
+  }
+  .reveal p{
+    font-size: 18px;
+    text-align: center;
+    line-height: 30px;
+    padding: 0 20px;
+  }
+  
 /* service section */
 
 .services{
@@ -140,48 +166,97 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 100px;
+    padding: 100px 0 0 0;
+    background: #d8d8d8;
 }
 
 .service-header{
     text-align: center;
     justify-content: center;
     color: #06163a;
-    font-size: 28px;
+    font-size: 25px;
     padding: 0 10vw 10vh;
 }
 
+.service-header h5{
+    font-size: 19px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
 .service-container{
-    display: flex;
-    flex-wrap: wrap;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;
-    align-items: center;
+    width: 100%;
 }
 
 .service-item{
-    background: #f8f8f8;
-    font-size: 20px;
-    color: #000;
-    height: 300px;
-    width: 350px;
-    margin: 10px;
-    padding: 5px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     text-align: center;
-    border-radius: 41% 59% 45% 55% / 64% 22% 78% 36% ;
+    color: #000;
+    padding: 25px;
+    border-radius: 20px;
+    min-height: 270px;
+    margin: 20px;
+    background: #f0f0f0;
+    box-shadow:  0 0 0 #cccccc,
+                0 0 0 #ffffff,
+                10px 10px 10px #cccccc inset,
+                -10px -10px 10px #ffffff inset;
+}
+
+
+@keyframes anime {
+    0% {
+      width: 60px;
+      height: 60px;
+      background: #f0f0f0;
+      box-shadow:  0 0 0 #cccccc,
+                   0 0 0 #ffffff,
+                    10px 10px 10px #cccccc inset,
+                    -10px -10px 10px #ffffff inset;
+    
+    }
+    25% {
+      width: 60px;
+      height: 60px;
+      background: #f8f8f8;
+      box-shadow:  10px 10px 10px #cccccc,
+                   10px 10px 10px #ffffff,
+                   0 0 0 #cccccc inset,
+                   0 0 0 #ffffff inset;
+    }
+    50% {
+      background: #f8f8f8;
+      box-shadow:  10px 10px 10px #cccccc,
+                   10px 10px 10px #ffffff,
+                   0 0 0 #cccccc inset,
+                   0 0 0 #ffffff inset;
+    }
+    100% {
+      background: #fafafa;
+      box-shadow:  40px 40px 40px #cccccc,
+                   0 0 0 #ffffff,
+                   0 0 0 #cccccc inset,
+                   2px 2px 2px #ffffff inset;
+    }
 }
 
 .service-item img{
     width: 60px;
     height: 60px;
+    animation: hide 15s forwards;
 }
 
 .service-item h2{
-    font-size: 28px;
+    font-size: 25px;
     font-weight: 400;
+    animation: hide 15s forwards;
 }
 .service-item p{
     font-size: 15px;
@@ -189,7 +264,19 @@ body{
     line-height: 18px;
     padding: 20px;
     text-align: center;
+    animation: hide 15s forwards;
 }
+
+@keyframes hide {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
 
 /* call back section */
 .call-back{
@@ -917,10 +1004,67 @@ body{
 .services-container{
     display: flex;
     width: 100%;
-    padding: 60px;
+    padding: 60px 100px;
     flex-direction: column;
-    flex-wrap: wrap;
 }
+
+.services-content{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+}
+
+.services-content.sec{
+    flex-direction: row-reverse !important;
+}
+
+.services-content .ser-bg{
+    width: 50%;
+    height: 550px;
+}
+
+.services-content .ser-bg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+}
+
+.ser-img::after{
+    content: '';
+    background: #06163a;
+    position: absolute;
+    width: 40%;
+    height: 500px;
+    bottom: 0;
+    border-radius: 5%;
+    left: 0;
+    z-index: -9;
+}
+
+.ser-img.sec::after{
+    background: #b70000 !important;
+    right: 0 !important;
+    left: 60%;
+}
+
+.services-item{
+    width: 50%;
+    padding: 40px;
+}
+
+.services-item h2{
+    font-size: 33px;
+    margin: 0 0 40px 0;
+}
+
+.services-item p{
+    font-size: 20px;
+    line-height: 30px;
+    padding-bottom: 20px;
+}
+
 
 /* programs page */
 
@@ -1083,6 +1227,12 @@ body{
 
 
 @media (max-width: 996px){
+
+    .service-container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+
     /* hero */
     #hero h1{
         font-size: 40px;
@@ -1168,6 +1318,37 @@ body{
     }
 
     /* services page */
+    .services-container {
+        padding: 60px 10px;
+    }
+
+    .services-content {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .services-content.sec {
+        flex-direction: column !important;
+    }
+
+    .services-content .ser-bg {
+        width: 100%;
+    }
+
+    .ser-img::after {
+        width: 80%;
+        top: 10%;
+    }
+
+    .services-content .ser-bg img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .services-item {
+        width: 100%;
+    }
+
     .call-serv{
         line-height: normal;
     }
@@ -1185,6 +1366,43 @@ body{
     /* index */
     .services{
         padding: 0;
+    }
+
+    #hero {
+        height: 70vh;
+    }
+
+    #hero h1 {
+        font-size: 26px;
+    }
+
+    #hero h1 {
+        font-size: 26px;
+    }
+
+    .reveal {
+        padding: 30px;
+    }
+
+    .reveal h5 {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .reveal h1 {
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .reveal p {
+        font-size: 15px;
+        text-align: justify;
+        padding: 0 20px;
+    }
+
+    .service-container{
+        grid-template-columns: 1fr;
     }
 
     .call-back{
@@ -1227,11 +1445,8 @@ body{
     }
 
     .services .service-header {
-        text-align: center;
-        justify-content: center;
-        color: #06163a;
-        font-size: 28px;
-        padding: 10vw 10vh;
+        font-size: 18px;
+        padding: 20px;
     }
 
     .service-item.blue{
@@ -1345,4 +1560,20 @@ body{
     .insight-container .insight-item {
         width: 100%;
     }
+
+    /* service page */
+
+    .ser-img::after {
+        top: 100px;
+    }
+
+    .services-item {
+        padding: 100px 0 10px 0;
+    }
 }
+
+
+
+
+
+  
