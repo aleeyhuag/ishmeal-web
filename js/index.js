@@ -7,16 +7,6 @@ toggleBtn.addEventListener('click', () => {
     linkContainer.classList.toggle('show');
 })
 
-//links
-const link = document.querySelectorAll('.links');
-
-link.forEach(links => {
-    links.addEventListener('click', () => {
-        link.forEach(ele => ele.classList.remove('active'));
-        links.classList.add('active');
-    })
-})
-
 // slider
 
 const slideshowImages = document.querySelectorAll("#hero .slider");
