@@ -1,0 +1,165 @@
+<?php
+    include 'header.php';
+?>
+
+            <div class="links-container">
+                <ul>
+                    <li><a href="/" class="links active">Home</a></li>
+                    <li><a href="about.php" class="links about-link">About Us</a></li>
+                    <li><a href="services.php" class="links">Services</a></li>
+                    <li><a href="programs.php" class="links">Programmes</a></li>
+                    <li><a href="events.php" class="links">Events</a></li>
+                    <li><a href="ideas-insight.php" class="links">Ideas & Insights</a></li>
+                    <li><a href="contact.php" class="links">Contact Us</a></li> 
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="slider">
+            <div class="bg-img"></div>
+            <div class="content">
+                <h1 class="hero-head">We Make Your Business Prosper With Solutions</h1>
+                <p class="hero-p">Our commitment is to be an intergral part of the businesses or organisations we work with in building the appropriate responses and solutions for success.</p>
+            </div>
+        </div>
+        <div class="slider">
+            <div class="bg-img sec"></div>
+            <div class="content">
+                <h1 class="hero-head">THE BUSINESS ROUNDTABLE</h1>
+                <p class="hero-p">Let us get your business reach your potential customers!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="reveal" style="--td: 1.2s">
+        <h5 class="block-reveal" style="--bc: #06163a; --d: .1s">Does Your Company Need to Grow?</h5>
+        <h1 class="block-reveal" style="--bc: #bf0000; --d: .3s">YOU ARE NOT ALONE!</h1>
+        <p class="block-reveal" style="--bc: #06163a; --d: .5s">Many companies are either barely scraping by or not operating to their full potential. Let's face it, we all need a coach—someone with a fresh viewpoint who can assess, direct, and help—whether the endeavour is related to fitness, health, finances, or, in our case, business. We frequently come across companies that are experts in their field but lack the knowledge necessary to reach their target clientele, build up effective internal systems, or brand and market their websites appropriately.</p>
+    </section>
+
+    <section class="services">
+        <div class="service-header">
+            <h5>What we can do for you?</h5>
+           <p>Our focus is to help businesses and organization articulate their medium to long term ambitions and translate them into actions in a manner that is growth-oriented and sustainable.</p> 
+        </div>
+        <div class="service-container">
+            <div class="service-item">
+                <img src="img/icons/light-bulb.png" alt="">
+                <h2>Corporate Strategy Development</h2>
+                <p>We focus on giving leaders in organizations the opportunity to collectively contribute to the definition of a common “future” in an open and transparent environment.</p>
+            </div>
+            <div class="service-item">
+                <img src="img/icons/light-bulb.png" alt="">
+                <h2>Organisation & Business Review</h2>
+                <p>We align the core business processes, the systems, and the organizational structure that underpin the delivery of the business strategy so that there is focus.</p>
+            </div>
+            <div class="service-item">
+                <img src="img/icons/light-bulb.png" alt="">
+                <h2>Investor Advisory Services</h2>
+                <p>Our Associate Consultants network enables us to provide bespoke management services of the to any investor that we engage. We draw on a wealth of experience in areas of Registration, Start-up operational set up, Recruitment etc.</p>
+            </div>
+            <div class="service-item">
+                <img src="img/icons/light-bulb.png" alt="">
+                <h2>Human Capital Development</h2>
+                <p>We apply a full-spectrum Human Capital Development model that brings an overview of current management thinking and the evolving trends that are charting tomorrow’s Human Capital Development paths.</p>
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#06163a" fill-opacity="1" d="M0,160L48,170.7C96,181,192,203,288,192C384,181,480,139,576,117.3C672,96,768,96,864,117.3C960,139,1056,181,1152,181.3C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </section>
+
+    <!-- <section class="call-back bg">
+        <div class="call-back-heading">
+            <h2>Request a Free Call Back</h2>
+            <p> Get in touch and We Will Walk With You... ... ...</p>
+        </div>
+        <div class="call-back-container">
+            <div class="call-back-icon">
+                <img src="img/icons/customer-service-agent.png" alt="">
+            </div>
+            <form action="">
+                <input type="text" name="name" id="" placeholder="Name">
+                <input type="text" name="pnumber" id="" placeholder="Phone Number (with country code)">
+                <select name="services" id="">
+                    <option value="">--select service--</option>
+                    <option value="">Corporate Strategy Development</option>
+                    <option value="">Organisation & Business Review</option>
+                    <option value="">Brand & Channel Development</option>
+                    <option value="">Business Roundtable</option>
+                    <option value="">Management Programmes</option>
+                </select>
+                <button class="normal">Request</button>
+            </form>
+        </div>
+    </section> -->
+
+    <section class="insight">
+        <h2>Insights</h2>
+        <p>Read our views on the things that matter to you. And get to know our people. We make the difference.</p>
+        <div class="insight-container">
+            <div class="insight-item">
+                <img src="img/hero/1.jpg" alt="">
+                <h4>Stock</h4>
+                <h3>US Stocks Are Expensive</h3>
+                <span class="date">July 20, 2022</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae eum at dolorum voluptatem praesentium quas delectus fugit numquam illo ullam atque...</p>
+                <span class="tag">MARKET</span>
+                <a href="#">Read More</a>
+            </div>
+            <div class="insight-item">
+                <img src="img/hero/1.jpg" alt="">
+                <h4>Stock</h4>
+                <h3>US Stocks Are Expensive</h3>
+                <span class="date">July 20, 2022</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae eum at dolorum voluptatem praesentium quas delectus fugit numquam illo ullam atque...</p>
+                <span class="tag">MARKET</span>
+                <a href="#">Read More</a>
+            </div>
+            <div class="insight-item">
+                <img src="img/hero/1.jpg" alt="">
+                <h4>Stock</h4>
+                <h3>US Stocks Are Expensive</h3>
+                <span class="date">July 20, 2022</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae eum at dolorum voluptatem praesentium quas delectus fugit numquam illo ullam atque...</p>
+                <span class="tag">MARKET</span>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner">
+        <div class="banner-container">
+            <div class="banner-bg"></div>
+            <div class="banner-item">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <h3>Our Office</h3>
+                <p>No. 10 Ato Ahwoi Avenue, Westlands - West Legon, Accra - Ghana.</p>
+                <a href="">Locate Our Office</a>
+            </div>
+        </div>
+        <div class="banner-container">
+            <div class="banner-bg sec"></div>
+            <div class="banner-item">
+                <i class="fa-solid fa-envelope"></i>
+                <h3>Drop a Line</h3>
+                <p>You may contact us by filling in this form any time and we will give you a quick call back.</p>
+                <a href="">Fill our Form</a>
+            </div>
+        </div>
+        <div class="banner-container">
+            <div class="banner-bg thd"></div>
+            <div class="banner-item">
+                <i class="fa-solid fa-people-group"></i>
+                <h3>Careers</h3>
+                <p>Join one of the best fully Ghanaian owned management consulting firms.</p>
+                <a href="">Submit your CV here</a>
+            </div>
+        </div>
+    </section>
+
+    <?php
+        include 'footer.php';
+    ?>
