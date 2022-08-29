@@ -1,30 +1,13 @@
-<?php
-    include 'header.php';
-?>
-            <div class="links-container">
-                <ul>
-                    <li><a href="/" class="links">Home</a></li>
-                    <li><a href="about.html" class="links">About Us</a></li>
-                    <li><a href="services.php" class="links active">Services</a></li>
-                    <li><a href="programs.php" class="links">Programmes</a></li>
-                    <li><a href="events.php" class="links">Events</a></li>
-                    <li><a href="ideas-insight.php" class="links">Ideas & Insights</a></li>
-                    <li><a href="contact.php" class="links">Contact Us</a></li> 
-                </ul>
-            </div>
-        </div>
-    </header>
 
     <section class="services-header">
         <h1>Services</h1>
-        <p>Founded in 2001 in New York, USA</p>
     </section>
 
     <section class="services-container">
         <div class="services-content">
             <div class="ser-bg">
                 <div class="ser-img"></div>
-                <img src="img/hero/2.jpg" class="" alt="">
+                <img src="<?php base() ?>img/hero/2.jpg" class="" alt="">
             </div>
             <div class="services-item">
                 <h2>Organizational Strategy Development</h2>
@@ -35,7 +18,7 @@
         <div class="services-content sec">
             <div class="ser-bg">
                 <div class="ser-img sec"></div>
-                <img src="img/hero/2.jpg" class="" alt="">
+                <img src="<?php base() ?>img/hero/2.jpg" class="" alt="">
             </div>
             <div class="services-item">
                 <h2>Business Model & Organizational Review</h2>
@@ -46,7 +29,7 @@
         <div class="services-content">
             <div class="ser-bg">
                 <div class="ser-img"></div>
-                <img src="img/hero/2.jpg" class="" alt="">
+                <img src="<?php base() ?>img/hero/2.jpg" class="" alt="">
             </div>
             <div class="services-item">
                 <h2>Management Development</h2>
@@ -57,7 +40,7 @@
         <div class="services-content sec">
             <div class="ser-bg">
                 <div class="ser-img sec"></div>
-                <img src="img/hero/2.jpg" class="" alt="">
+                <img src="<?php base() ?>img/hero/2.jpg" class="" alt="">
             </div>
             <div class="services-item">
                 <h2>Investor Services</h2>
@@ -74,7 +57,7 @@
             <h1>Let's help you!</h1>
             <p>Working from home meant we could vary snack and coffee breaks…</p>
         </div>
-        <a href="contact.php" class="normal">Contact Us</a>
+        <a href="<?php base() ?>contact" class="normal">Contact Us</a>
     </section>
 
     <?php

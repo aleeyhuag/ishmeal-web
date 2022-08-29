@@ -35,6 +35,19 @@ button.normal{
     transition: 0.2s;
 }
 
+input.normal{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
 button.white{
     font-size: 13px;
     font-weight: 600;
@@ -353,6 +366,14 @@ body{
     padding: 15px;
 }
 
+.insight-big-con{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .insight-container{
     width: 100%;
     display: flex;
@@ -413,6 +434,24 @@ body{
     font-weight: 600;
     color: #383838;
     padding: 0 10px 5px;
+}
+
+.show_more_main{
+    width: 100% !important;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.show_more{
+    padding: 10px 20px;
+    border: 1px solid #b70000;
+    border-radius: 5px;
+}
+
+.show_more:hover{
+    background: #b70000;
+    color: #fff;
 }
 
 /* Banner */
@@ -504,7 +543,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 100px 80px;
+    padding: 150px;
 }
 
 .about-header h1{
@@ -863,13 +902,13 @@ body{
 .contact-header{
     background-image: url(../img/hero/Contact\ Us.jpg);
     background-size: cover;
-    background-position: top 50% left 50%;
+    background-position: top 70% left 50%;
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 100px 80px;
+    padding: 150px;
 }
 
 .contact-header h1{
@@ -977,7 +1016,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 100px 80px;
+    padding: 150px;
 }
 
 .services-header h1{
@@ -1123,6 +1162,124 @@ body{
     margin-bottom: 20px;
 }
 
+.program-content{
+    width: 100%;
+    display: flex;
+}
+
+.program-content .icon{
+    background-image: url(../img/icons/corporate-culture\ \(2\).png);
+    width: 100px;
+    height: 100px;
+    color: #000;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 20px 20px 0 0;
+}
+
+.program-content:nth-child(3) .icon{
+    background-image: url(../img/icons/leadership.png);
+}
+
+.program-content:nth-child(4) .icon{
+    background-image: url(../img/icons/productivity\(1\).png);
+}
+
+.program-content:nth-child(5) .icon{
+    background-image: url(../img/icons/productivity\(2\).png);
+}
+
+.program-content:nth-child(6) .icon{
+    background-image: url(../img/icons/appreciation.png);
+}
+
+.program-content:nth-child(7) .icon{
+    background-image: url(../img/icons/performance.png);
+}
+
+.program-content:nth-child(8) .icon{
+    background-image: url(../img/icons/team-building.png);
+}
+
+.program-content:nth-child(9) .icon{
+    background-image: url(../img/icons/change.png);
+}
+
+.program-content:nth-child(10) .icon{
+    background-image: url(../img/icons/consumer.png);
+}
+
+.program-content:nth-child(11) .icon{
+    background-image: url(../img/icons/talent-management.png);
+}
+
+.program-content .item{
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top: 1px solid #b70000;
+    border-bottom: 1px solid #b70000;
+    line-height: 20px;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+.program-content .item .hide{
+    display: none;
+    transition: .5s;
+}
+
+.program-content .item h2{
+    margin-bottom: 20px;
+    list-style-type:georgian;
+}
+
+.program-content .item .item-details .item-list{
+    padding: 20px 0 0 0;
+    color: #000 !important;
+}
+
+.program-content .item .item-details ul{
+    padding-left: 50px;
+}
+
+.more-btn{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 5vw;
+    top: 0;
+    cursor: pointer;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.more-btn span{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #1d1d1d;
+    transition: .5s;
+}
+
+.more-btn span:nth-child(2){
+    top: 70%;
+}
+
+.more-btn.active span:nth-child(1){
+    top: 50%;
+    transform: rotate(45deg);
+}
+.more-btn.active span:nth-child(2){
+    top: 50%;
+    transform: rotate(-45deg);
+}
+
 .programs-container .core-item-container{
     display: flex;
     flex-wrap: wrap;
@@ -1251,12 +1408,13 @@ body{
     }
 
     .footer-container{
-        flex-direction: column-reverse;
+        flex-direction: column;
         flex-wrap: nowrap !important;
     }
 
     .footer-container .footer-item {
         width: 100% !important;
+        text-align: center !important;
     }
 
     .footer-small {

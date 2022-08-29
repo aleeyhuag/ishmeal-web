@@ -1,20 +1,3 @@
-<?php
-    include 'header.php';
-?>
-
-            <div class="links-container">
-                <ul>
-                <li><a href="/" class="links">Home</a></li>
-                    <li><a href="about.php" class="links active">About Us</a></li>
-                    <li><a href="services.php" class="links">Services</a></li>
-                    <li><a href="programs.php" class="links">Programmes</a></li>
-                    <li><a href="events.php" class="links">Events</a></li>
-                    <li><a href="ideas-insight.php" class="links">Ideas & Insights</a></li>
-                    <li><a href="contact.php" class="links">Contact Us</a></li> 
-                </ul>
-            </div>
-        </div>
-    </header>
 
     <section class="about-header">
         <h1>About Us</h1>
@@ -38,16 +21,16 @@
             <div class="main-item thd">
                 <h3>Clients</h3>
                 <div class="contents">
-                    <img src="img/Clients/Anglogold.PNG" alt="">
-                    <img src="img/Clients/Ghana Navy.PNG" alt="">
-                    <img src="img/Clients/Cocacola.PNG" alt="">
-                    <img src="img/Clients/Conship.PNG" alt="">
-                    <img src="img/Clients/Enterprise.PNG" alt="">
-                    <img src="img/Clients/GHACEM.PNG" alt="">
-                    <img src="img/Clients/GIZ.PNG" alt="">
-                    <img src="img/Clients/NPA.JPG" alt="">
-                    <img src="img/Clients/Stanchart.JPG" alt="">
-                    <img src="img/Clients/UG.PNG" alt="">
+                    <img src="<?php base() ?>img/Clients/Anglogold.PNG" alt="">
+                    <img src="<?php base() ?>img/Clients/Ghana Navy.PNG" alt="">
+                    <img src="<?php base() ?>img/Clients/Cocacola.PNG" alt="">
+                    <img src="<?php base() ?>img/Clients/Conship.PNG" alt="">
+                    <img src="<?php base() ?>img/Clients/Enterprise.PNG" alt="">
+                    <img src="<?php base() ?>img/Clients/GHACEM.PNG" alt="">
+                    <img src="<?php base() ?>img/Clients/GIZ.PNG" alt="">
+                    <img src="<?php base() ?>img/Clients/NPA.JPG" alt="">
+                    <img src="<?php base() ?>img/Clients/Stanchart.JPG" alt="">
+                    <img src="<?php base() ?>img/Clients/UG.PNG" alt="">
                 </div>
             </div>
             <div class="main-item fth"></div>
@@ -61,9 +44,9 @@
                 <p>Our workforce enables our operations. They represent the integrity of what I&YA stands for because they are constantly working on the front lines with our client-partners. As a result, we have witnessed many of our employees advance fast through the ranks and build their own reputations in their local communities.</p>
                 <p>Ishmael Yamson & Associates takes seriously its duties to uphold employment equity and provide training. AES makes significant investments in the development of outstanding individuals and their equal opportunity advancement into the world of business operations.</p>
             </div>
-            <div class="leaders">
+            <!-- <div class="leaders">
                 <div class="item">
-                    <img src="img/hero/2.jpg" alt="">
+                    <img src="<?php base() ?>img/hero/2.jpg" alt="">
                     <div class="details">
                         <h4>Stanley John</h4>
                         <h5>Former Chairman</h5>
@@ -71,66 +54,66 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img src="img/hero/2.jpg" alt="">
+                    <img src="<?php base() ?>img/hero/2.jpg" alt="">
                     <div class="details">
                         <h4>Stanley John</h4>
                         <h5>Former Chairman</h5>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum odit quis, inventore eaque distinctio fugit! Tempore optio hic officia laudantium. Atque consequuntur deleniti dicta illo laboriosam provident iusto autem iste.</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
-        <div class="directors">
+        <!-- <div class="directors">
             <h3>Directors</h3>
             <div class="director-container">
                 <div class="dir-item">
-                    <img src="img/hero/3.jpg" alt="">
+                    <img src="<?php base() ?>img/hero/3.jpg" alt="">
                     <h4>Aliyu Amir</h4>
                     <p>Designer</p>
                 </div>
                 <div class="dir-item">
-                    <img src="img/hero/3.jpg" alt="">
+                    <img src="<?php base() ?>img/hero/3.jpg" alt="">
                     <h4>Aliyu Amir</h4>
                     <p>Designer</p>
                 </div>
                 <div class="dir-item">
-                    <img src="img/hero/3.jpg" alt="">
+                    <img src="<?php base() ?>img/hero/3.jpg" alt="">
                     <h4>Aliyu Amir</h4>
                     <p>Designer</p>
                 </div>
                 <div class="dir-item">
-                    <img src="img/hero/3.jpg" alt="">
+                    <img src="<?php base() ?>img/hero/3.jpg" alt="">
                     <h4>Aliyu Amir</h4>
                     <p>Designer</p>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
 
     <section class="about-container">
         <div class="about-note">
             <div class="about-note-ceo">
-                <img src="img/hero/manager.jpeg" alt="">
+                <img src="<?php base() ?>img/hero/manager.jpeg" alt="">
                 <h5>Chairman</h5>
-                <h3>Omar Taufiq</h3>
+                <h3>Dr. Ishmael Evans Yamson</h3>
                 <p>Other people's successes are good news - for them and for you. Good for you because they show you a way to go.</p>
             </div>
             <div class="about-note-container">
                 <div class="about-note-item">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quod corporis, possimus nihil natus, a doloremque impedit maxime id vel adipisci eaque non, cum earum quaerat totam rerum tenetur eos?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quod corporis, possimus nihil natus, a doloremque impedit maxime id vel adipisci eaque non, cum earum quaerat totam rerum tenetur eos?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quod corporis, possimus nihil natus, a doloremque impedit maxime id vel adipisci eaque non, cum earum quaerat totam rerum tenetur eos?</p>
+                    <p>The World has changed. So has the way of doing business.</p>
+                    <p>At Ishmael Yamson & Associates we believe that all businesses and organisations have the inherent power to succeed. Every business can discover the right path to success if its leadership lead with integrity and a clarity of vision –  underpinned by values and behaviours dictated by Good Corporate Governance.</p>
+                    <p>We also know that a business strategy is as good as its execution and so the scope of any strategy development should include how it is translated into action. The implementation can easily stall if it is not undertaken with a single-mindedness and clearly-defined ownership of key actions, deliverables, and timings.</p>
                 </div>
                 <div class="about-note-item">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quod corporis, possimus nihil natus, a doloremque impedit maxime id vel adipisci eaque non, cum earum quaerat totam rerum tenetur eos?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quod corporis, possimus nihil natus, a doloremque impedit maxime id vel adipisci eaque non, cum earum quaerat totam rerum tenetur eos?</p>
-                    <a href="#">Join the conversation</a>
+                    <p>Our team of competent and experienced consultants have decades of experience in business and organisational transformation to help your business and organisation unearth its unique capabilities and build the appropriate responses and solutions for success.</p>
+                    <p>Our work emphasises the role of good governance, robust strategic and operational frameworks, and leadership development to drive market competitiveness and an outstanding organisation for all stakeholders.</p>
+                    <a href="<?php base() ?>contact">Talk to us today!</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="call-back bg">
+    <!-- <section class="call-back bg">
         <div class="call-back-heading">
             <h2>Let's help you!</h2>
         </div>
@@ -148,7 +131,7 @@
                 <button class="normal">Send</button>
             </form>
         </div>
-    </section>
+    </section> -->
 
     <?php
         include 'footer.php';

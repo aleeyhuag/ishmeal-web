@@ -1,14 +1,15 @@
+
 <footer id="footer">
         <div class="subscribe">
             <p><i class="fa-solid fa-envelope"></i>Stay in touch — get updates with latest topics.</p>
-            <form action="">
+            <form action="" method="post">
                 <input type="email" name="email" id="" placeholder="Your Email Address">
-                <button class="normal">Subscribe!</button>
+                <input type="submit" name="subscribe" class="normal" value="Subscribe">
             </form>
         </div>
         <div class="footer-container">
             <div class="footer-item">
-                <img src="img/hero/IY&A Logo.jpg" class="logo" alt="">
+                <img src="<?php base() ?>img/hero/IY&A Logo.jpg" class="logo" alt="">
                 <p>When your people get up every day wanting to come to work, success happens. We help you to ensure everyone is in the right jobs, well motivated and properly rewarded.</p>
                 <div class="address">
                     <p><span>Address: </span> No. 10 Ato Ahwoi Avenue,</p> <p>Westlands - West Legon, Accra - Ghana.</p>
@@ -21,18 +22,18 @@
                 <p>Days: Monday - Friday</p>
                 <p>Time: 9:00am - 5:00pm</p>
                 <div class="quick-links">
-                    <a href="#">Home</a>
-                    <a href="#" >About Us</a>
-                    <a href="#" >Services</a>
-                    <a href="#" >Programmes</a>
-                    <a href="#" >Events</a>
-                    <a href="#" >Contact Us</a>
-                    <a href="#" >Ideas & Insights</a>
+                    <a href="<?php base() ?>index">Home</a>
+                    <a href="<?php base() ?>about" >About Us</a>
+                    <a href="<?php base() ?>services" >Services</a>
+                    <a href="<?php base() ?>programs" >Programmes</a>
+                    <a href="<?php base() ?>events" >Events</a>
+                    <a href="<?php base() ?>contact" >Contact Us</a>
+                    <a href="<?php base() ?>ideas-insight" >Ideas & Insights</a>
                 </div>
             </div>
             <div class="footer-item">
                 <h3 style="padding-bottom: 10px;">Request a Call Back!</h3>
-                <form action="">
+                <form action="" method="POST">
                     <input type="text" name="name" id="" placeholder="Name">
                     <input type="text" name="pnumber" id="" placeholder="Phone Number (with country code)">
                     <select name="services" id="">
@@ -43,7 +44,7 @@
                         <option value="">Business Roundtable</option>
                         <option value="">Management Programmes</option>
                     </select>
-                    <button class="normal">Request</button>
+                    <input type="submit" name="request" class="normal" value="Request">
                 </form>
             </div>
         </div>
@@ -60,7 +61,7 @@
         </div>
     </footer>
 
-    <script src="js/index.js"></script>
+    <script src="<?php base() ?>js/index.js"></script>
     <script>
         ScrollReveal().reveal('.hero-head', { scale: 0.65 });;
         ScrollReveal().reveal('.hero-p', { delay: 2000 , distance: '100px' });
@@ -71,6 +72,12 @@
                                                 interval: 500,
                                                 distance: '150px',
                                                 opacity: 0.2
+                                            });
+        ScrollReveal().reveal('.program-content', {
+                                                delay: 800,
+                                                interval: 500,
+                                                distance: '150px',
+                                                opacity: 0
                                             });
     </script>
 

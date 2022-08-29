@@ -1,0 +1,7 @@
+RewriteEngine on 
+
+RewriteRule ^about about.php [NC,L]
+RewriteRule ^contact contact.php [NC,L]
+RewriteRule ^ideas-insight ideas-insight.php [NC,L]
+RewriteRule ^programs programs.php [NC,L]
+RewriteRule ^services services.php [NC,L]

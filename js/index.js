@@ -7,6 +7,19 @@ toggleBtn.addEventListener('click', () => {
     linkContainer.classList.toggle('show');
 })
 
+const moreBtn = document.querySelectorAll('.more-btn');
+
+moreBtn.forEach(moreBtns => {
+    moreBtns.addEventListener('click', () => {
+        moreBtns.classList.toggle('active');
+    })
+})
+
+let details = document.querySelectorAll(".item-details");
+function readMore(btn){
+    let post = btn.parentElement;
+    post.querySelector(".item-details").classList.toggle("hide");
+}
 //links
 const link = document.querySelectorAll('.links');
 
@@ -17,19 +30,3 @@ link.forEach(links => {
     })
 })
 
-// slider
-
-const slideshowImages = document.querySelectorAll("#hero .slider");
-
-const nextImageDelay = 10000;
-let currentImageCounter = 0;
-
-slideshowImages[currentImageCounter].style.opacity = 1;
-
-setInterval(nextImage, nextImageDelay);
-
-function nextImage(){
-    slideshowImages[currentImageCounter].style.opacity = 0;
-    currentImageCounter = (currentImageCounter + 1) % slideshowImages.length;
-    slideshowImages[currentImageCounter].style.opacity = 1;
-}

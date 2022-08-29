@@ -1,20 +1,3 @@
-<?php
-    include 'header.php';
-?>
-
-            <div class="links-container">
-                <ul>
-                    <li><a href="/" class="links active">Home</a></li>
-                    <li><a href="about.php" class="links about-link">About Us</a></li>
-                    <li><a href="services.php" class="links">Services</a></li>
-                    <li><a href="programs.php" class="links">Programmes</a></li>
-                    <li><a href="events.php" class="links">Events</a></li>
-                    <li><a href="ideas-insight.php" class="links">Ideas & Insights</a></li>
-                    <li><a href="contact.php" class="links">Contact Us</a></li> 
-                </ul>
-            </div>
-        </div>
-    </header>
 
     <section id="hero">
         <div class="slider">
@@ -46,22 +29,22 @@
         </div>
         <div class="service-container">
             <div class="service-item">
-                <img src="img/icons/light-bulb.png" alt="">
+                <img src="<?php base() ?>img/icons/light-bulb.png" alt="">
                 <h2>Corporate Strategy Development</h2>
                 <p>We focus on giving leaders in organizations the opportunity to collectively contribute to the definition of a common “future” in an open and transparent environment.</p>
             </div>
             <div class="service-item">
-                <img src="img/icons/light-bulb.png" alt="">
+                <img src="<?php base() ?>img/icons/light-bulb.png" alt="">
                 <h2>Organisation & Business Review</h2>
                 <p>We align the core business processes, the systems, and the organizational structure that underpin the delivery of the business strategy so that there is focus.</p>
             </div>
             <div class="service-item">
-                <img src="img/icons/light-bulb.png" alt="">
+                <img src="<?php base() ?>img/icons/light-bulb.png" alt="">
                 <h2>Investor Advisory Services</h2>
                 <p>Our Associate Consultants network enables us to provide bespoke management services of the to any investor that we engage. We draw on a wealth of experience in areas of Registration, Start-up operational set up, Recruitment etc.</p>
             </div>
             <div class="service-item">
-                <img src="img/icons/light-bulb.png" alt="">
+                <img src="<?php base() ?>img/icons/light-bulb.png" alt="">
                 <h2>Human Capital Development</h2>
                 <p>We apply a full-spectrum Human Capital Development model that brings an overview of current management thinking and the evolving trends that are charting tomorrow’s Human Capital Development paths.</p>
             </div>
@@ -99,34 +82,44 @@
     <section class="insight">
         <h2>Insights</h2>
         <p>Read our views on the things that matter to you. And get to know our people. We make the difference.</p>
-        <div class="insight-container">
-            <div class="insight-item">
-                <img src="img/hero/1.jpg" alt="">
-                <h4>Stock</h4>
-                <h3>US Stocks Are Expensive</h3>
-                <span class="date">July 20, 2022</span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae eum at dolorum voluptatem praesentium quas delectus fugit numquam illo ullam atque...</p>
-                <span class="tag">MARKET</span>
-                <a href="#">Read More</a>
-            </div>
-            <div class="insight-item">
-                <img src="img/hero/1.jpg" alt="">
-                <h4>Stock</h4>
-                <h3>US Stocks Are Expensive</h3>
-                <span class="date">July 20, 2022</span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae eum at dolorum voluptatem praesentium quas delectus fugit numquam illo ullam atque...</p>
-                <span class="tag">MARKET</span>
-                <a href="#">Read More</a>
-            </div>
-            <div class="insight-item">
-                <img src="img/hero/1.jpg" alt="">
-                <h4>Stock</h4>
-                <h3>US Stocks Are Expensive</h3>
-                <span class="date">July 20, 2022</span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae eum at dolorum voluptatem praesentium quas delectus fugit numquam illo ullam atque...</p>
-                <span class="tag">MARKET</span>
-                <a href="#">Read More</a>
-            </div>
+        <div class="insight-big-con">
+
+        <?php
+            
+            include_once 'dbh.php';
+
+            $sql = "SELECT * FROM ideas ORDER BY id DESC LIMIT 3";
+            $result = mysqli_query($conn, $sql);
+            
+            echo '<div class="insight-container">';
+            
+            if (mysqli_num_rows($result) > 0) {
+                // output data of each row
+                while($row = mysqli_fetch_assoc($result)) {
+
+                    $id = $row['id'];
+                    $heading = $row["heading"];
+                    $tag = $row["tag"];
+                    $date = $row['date'];
+                    $details = $row['details'];
+                    $image = base64_encode( $row['image'] );
+
+                    echo ' 
+                        <div class="insight-item">
+                            <img src="data:image/jpg;charset=utf8;base64, '.base64_encode($row['image']).'"  alt="">
+                            <h4>'.$tag.'</h4>
+                            <h3>'.$heading.'</h3>
+                            <span class="date">'.$date.'</span>
+                            <p>'.$details.'</p>
+                        </div>
+                    
+                    ';
+                }
+
+            } else {
+                echo "Nothing to see yet!";
+            }
+        ?>       
         </div>
     </section>
 
@@ -137,7 +130,7 @@
                 <i class="fa-solid fa-map-location-dot"></i>
                 <h3>Our Office</h3>
                 <p>No. 10 Ato Ahwoi Avenue, Westlands - West Legon, Accra - Ghana.</p>
-                <a href="">Locate Our Office</a>
+                <a href="<?php base() ?>contact">Locate Our Office</a>
             </div>
         </div>
         <div class="banner-container">
@@ -146,7 +139,7 @@
                 <i class="fa-solid fa-envelope"></i>
                 <h3>Drop a Line</h3>
                 <p>You may contact us by filling in this form any time and we will give you a quick call back.</p>
-                <a href="">Fill our Form</a>
+                <a href="<?php base() ?>contact">Fill our Form</a>
             </div>
         </div>
         <div class="banner-container">
@@ -155,11 +148,29 @@
                 <i class="fa-solid fa-people-group"></i>
                 <h3>Careers</h3>
                 <p>Join one of the best fully Ghanaian owned management consulting firms.</p>
-                <a href="">Submit your CV here</a>
+                <a href="#">Submit your CV here</a>
             </div>
         </div>
     </section>
-
     <?php
         include 'footer.php';
     ?>
+    <script>
+        // slider
+
+        const slideshowImages = document.querySelectorAll("#hero .slider");
+
+        const nextImageDelay = 10000;
+        let currentImageCounter = 0;
+
+        slideshowImages[currentImageCounter].style.opacity = 1;
+
+        setInterval(nextImage, nextImageDelay);
+
+        function nextImage(){
+            slideshowImages[currentImageCounter].style.opacity = 0;
+            currentImageCounter = (currentImageCounter + 1) % slideshowImages.length;
+            slideshowImages[currentImageCounter].style.opacity = 1;
+        }
+
+    </script>

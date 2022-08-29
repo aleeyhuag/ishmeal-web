@@ -1,19 +1,3 @@
-<?php
-    include 'header.php';
-?>
-            <div class="links-container">
-                <ul>
-                    <li><a href="/" class="links">Home</a></li>
-                    <li><a href="about.php" class="links">About Us</a></li>
-                    <li><a href="services.php" class="links">Services</a></li>
-                    <li><a href="programs.php" class="links">Programmes</a></li>
-                    <li><a href="events.php" class="links">Events</a></li>
-                    <li><a href="ideas-insight.php" class="links">Ideas & Insights</a></li>
-                    <li><a href="contact.php active" class="links active">Contact Us</a></li> 
-                </ul>
-            </div>
-        </div>
-    </header>
 
     <section class="contact-header">
         <h1>Contact Us</h1>
@@ -22,18 +6,18 @@
     <section class="contact-container">
         <p>Thank you for your interest. Please fill out the form below to inquire about our work in Management Consultations & Advisors.</p>
         <div class="contact-body">
-            <form action="">
+            <form action="" method="post">
                 <div class="name-mail">
                     <input type="text" class="name" name="name" id="" placeholder="Name">
                     <input type="email" name="email" id="" placeholder="Email">
                 </div>
                 <input type="text" name="pnumber" id="" placeholder="Phone Number (with country code)">
-                <textarea class="textarea" name="" placeholder="Describe Briefly"></textarea>
-                <button class="normal">Send</button>
+                <textarea class="textarea" name="message" placeholder="Describe Briefly"></textarea>
+                <input type="submit" name="contact-message" class="normal" value="Send" style="width: 100px; border: 1px solid #b70000; opacity: .7;">
             </form>
             <div class="contact-item">
                 <div class="icon">
-                    <img src="img/icons/boy-with-tie-talking.png" alt="">
+                    <img src="<?php base() ?>img/icons/boy-with-tie-talking.png" alt="">
                     <div class="icon-details">
                         <p>+233 24 766 5283</p>
                         <p>info@ieyamson.com</p>
@@ -41,7 +25,7 @@
                 </div>
                 <div class="address">
                     <h4>Ghana</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    <p> No. 10 Ato Ahwoi Avenue, Westlands - West Legon, Accra - Ghana.</p>
                     <a href="#map-container">Get directions</a>
                 </div>
             </div>
