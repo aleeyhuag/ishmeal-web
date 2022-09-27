@@ -139,6 +139,22 @@
     opacity: 1;
 }
 
+
+/* form */
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container form{
+    width: 400px;
+    padding: 40px 20px;
+    border: 1px solid blue;
+    border-radius: 10px;
+}
+
 @media (max-width: 996px){
     html{
         font-size: 14px;
@@ -240,3 +256,4 @@
         width: 70%;
     }
 }
+

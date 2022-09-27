@@ -118,6 +118,23 @@
                 });
             });
         });
+
+        $(document).ready(function(){
+            $(document).on('click','.show_event',function(){
+                var ID = $(this).attr('id');
+                $('.show_event').hide();
+                $('.loading').show();
+                $.ajax({
+                    type:'POST',
+                    url:'events_more.php',
+                    data:'id='+ID,
+                    success:function(html){
+                        $('#show_more_event'+ID).remove();
+                        $('.events-container').append(html);
+                    }
+                });
+            });
+        });
     </script>
 
     <script>

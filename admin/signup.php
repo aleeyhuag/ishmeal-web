@@ -1,45 +1,56 @@
 <?php
-$success = "";
+
+session_start();
+include("session.php");
+    $success = "";
     if (isset($_POST['submit'])) {
-        require 'dbh.php';
-        $mail = $_POST['mail'];
-        $password = $_POST['password'];
-        if (empty($mail) || empty($password)) {
-            $success = '<p style=\'color: red; font-size: 20px;\'>Fields Cannot Be Empty</p>';
-        }
-        else {
+        
+        include_once 'dbh.php';
+
+        // insert a row
+        $mail = $_POST["mail"];
+        $name = $_POST["name"];
+        $password=$_POST["password"];
+
+        
+        if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
+            $success = "invalidmail";
+        }else {
             $sql = "SELECT * FROM admins WHERE mail=?";
-            $stmt = mysqli_stmt_init($conn);
+            $stmt =mysqli_stmt_init($conn);
             if (!mysqli_stmt_prepare($stmt, $sql)) {
-                $success = '<p style=\'color: red; font-size: 20px;\'>SQLerror</p>';
-            }
-            else {
+                $success = "sqlerror";
+            }else{
                 mysqli_stmt_bind_param($stmt, "s", $mail);
                 mysqli_stmt_execute($stmt);
-                $result = mysqli_stmt_get_result($stmt);
-                if ($row = mysqli_fetch_assoc($result)) {
-                    $pwdcheck = $row['password'];
-                    if (!$pwdcheck == $password) {
-                        $success = '<p style=\'color: red; font-size: 20px;\'>Wrong Password</p>';
-                    }
-                    elseif ($pwdcheck == $password) {
-                        session_start();
-                        $_SESSION['userid'] = $row['id'];
-                        $_SESSION['mail'] = $row['mail'];
+                mysqli_stmt_store_result($stmt);
+                $resultCheck = mysqli_stmt_num_rows($stmt);
+                if ($resultCheck > 0) {
+                    $success = '<p style=\'color: red; font-size: 20px;\'>Multiple Emails found. Use different Email</p>';
+                }else{
+                    // prepare sql and bind parameters
+                    $sql = "INSERT INTO admins (mail, name, password) 
+                    VALUES (?, ?, ?)";
 
-                        header("Location: home.php?Login=success");
-                        exit();
+                    $stmt =mysqli_stmt_init($conn);
+                    if (!mysqli_stmt_prepare($stmt, $sql)) {
+                        $success = "sqlerror2";
+                    }else {
+                        mysqli_stmt_bind_param($stmt, "sss", $mail, $name, $password);
+                        mysqli_stmt_execute($stmt);
+                        
+                        if($stmt){
+                            $success = '<p style=\'color: green; font-size: 20px;\'>New records created successfully</p>'; 
+                        }else{ 
+                            $success = '<p style=\'color: red; font-size: 20px;\'>Not Successful, try again. </p>';
+                        } 
                     }
-                    else{
-                        $success = '<p style=\'color: red; font-size: 20px;\'>Wrong Password</p>';
-                    }
-                }
-                else{
-                    $success = '<p style=\'color: red; font-size: 20px;\'>User doesnt exist</p>';
                 }
             }
-        }
+        }        
+
     }
+
 ?>
 
 <!DOCTYPE html>
@@ -86,9 +97,10 @@ $success = "";
     <section class="container">
         <form action="" method="post" enctype="multipart/form-data">
         <?php echo $success ?>
+            <input type="text" name="name" id="" placeholder="Name">
             <input type="email" name="mail" id="" placeholder="Email">
             <input type="password" name="password" id="" placeholder="Password">
-            <button name="submit" class="normal" style="background: #b70000;">Login</button>
+            <button name="submit" class="normal" style="background: #b70000;">Sign Up</button>
         </form>
     </section>
     

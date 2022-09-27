@@ -7,8 +7,8 @@ toggleBtn.addEventListener('click', () => {
     linkContainer.classList.toggle('show');
 })
 
+//programs toggle
 const moreBtn = document.querySelectorAll('.more-btn');
-
 moreBtn.forEach(moreBtns => {
     moreBtns.addEventListener('click', () => {
         moreBtns.classList.toggle('active');
